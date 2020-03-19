@@ -159,3 +159,49 @@ const equal3 = (a,b,c) => a + b === 3 ? "Yes, it equals 3!" : a + b;
 // To bring it all together and combine arrow functions with template strings, you would write:
 
 const equal3 = (a,b,c) => a + b === 3 ? "Yes, it equals 3!" : `No, it equals ${a + b}`;
+
+// ***********************
+// ** DEFAULT ARGUMENTS **
+// ***********************
+
+// You can now declare default arguments within function parameters. Using the above example, you can now make the following function without any declaring any variables above.
+
+const myThoughts = (name="Brad", jsAge = 25) => `Wow ${name}, I can't believe javascript is now ${jsAge + 5} years old!`;
+
+// As an example without arrow functions, that would read as:
+
+function myThoughts(name="Brad", jsAge = 25) {
+    return `Wow ${name}, I can't believe javascript is now ${jsAge + 5} years old!`;
+}
+
+
+// *************
+// ** SYMBOLS **
+// *************
+
+
+// Symbols are a new identifier to give an argument a completely unique type that does not === anything else. 
+
+// In traditional javascript, 
+
+let name = "Brad Mehlenbacher";
+let fullName = "Brad Mehlenbacher";
+
+name === fullName;
+
+// will always return true.
+
+// However, when using these strings as symbols, it tells javascript that there is nothing else like this expression. As an example: 
+
+let name = Symbol("Brad Mehlenbacher");
+let fullName = Symbol("Brad Mehlenbacher");
+
+// If you were to call on either of them, they would return: 
+
+// Symbol(Brad Mehlenbacher)
+
+// However, if you were to call:
+
+name === fullName;
+
+// it would now return false, because they are now unique, despite having the exact same value.
