@@ -1,4 +1,4 @@
-//ES 5 and 6 Summarized - by Brad Mehlenbacher (m3l0n // bradmdesign)
+//ES 6 Summarized - by Brad Mehlenbacher (m3l0n // bradmdesign)
 
 
 // *******************
@@ -149,5 +149,13 @@ function add(a, b) {
 
 const add2 = (a,b) => a + b;
 
-// const means the function won't be changing, the (a, b) act as parameters and tell the script that it's a function, and a+b denotes what is returned. This only works with functions
-// that have a single return.
+// const means the function won't be changing, the (a, b) act as parameters and tell the script that it's a function, and a+b denotes what is returned. You can also use this as an "if else"
+// statement with a ternary operator, like so
+
+const equal3 = (a,b,c) => a + b === 3 ? "Yes, it equals 3!" : a + b;
+
+// The above would check if a + b is equal to 3 - if it does,  return 3, otherwise return what it actually equals.
+
+// To bring it all together and combine arrow functions with template strings, you would write:
+
+const equal3 = (a,b,c) => a + b === 3 ? "Yes, it equals 3!" : `No, it equals ${a + b}`;
